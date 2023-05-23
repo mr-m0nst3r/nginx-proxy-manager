@@ -131,7 +131,7 @@ const setupCertbotPlugins = () => {
 				});
 
 				if (plugins.length) {
-					const install_cmd = '. /opt/certbot/bin/activate && pip install --no-cache-dir ' + plugins.join(' ') + ' && deactivate';
+					const install_cmd = '. /opt/certbot/bin/activate && pip install -i https://pypi.tuna.tsinghua.edu.cn/simple/ --no-cache-dir ' + plugins.join(' ') + ' && deactivate';
 					promises.push(utils.exec(install_cmd));
 				}
 
